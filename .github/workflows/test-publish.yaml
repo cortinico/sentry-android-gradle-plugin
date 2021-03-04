@@ -3,15 +3,13 @@ name: Test Publishing UUID
 on:
   push:
     branches:
-      - master
-      - feat/gradle-plugin-v2
+      - '*'
   pull_request:
     branches:
       - '*'
 
 jobs:
   publish:
-    if: ${{ github.repository == 'getsentry/sentry-android-gradle-plugin'}}
     runs-on: ubuntu-latest
 
     env:
